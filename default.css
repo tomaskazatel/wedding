@@ -1,68 +1,81 @@
+/* font */
+@font-face {
+    font-family: 'Noteworthy';
+    src: url('./font/Noteworthy-Light.eot');
+    src: url('./font/Noteworthy-Light.eot?#iefix') format('embedded-opentype'),
+        url('./font/Noteworthy-Light.woff2') format('woff2'),
+        url('./font/Noteworthy-Light.woff') format('woff'),
+        url('./font/Noteworthy-Light.ttf') format('truetype'),
+        url('./font/Noteworthy-Light.svg#Noteworthy-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
 /* colors */
 :root {
-  --white: #ffffff;
-  --grey: #f6f6f6;
-  --blue: #3498db;
+    --white: #ffffff;
+    --grey: #f6f6f6;
+    --blue: #2c3e50;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  outline: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 @keyframes pulse {
-  0% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(-5px);
-  }
-  50% {
-    transform: translateY(5px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 section,
 header,
 footer {
-  width: 100%;
-  padding: 30px 0;
-  text-align: center;
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
 }
 
 header,
 #text,
 #place,
 #presents {
-  background-color: var(--grey);
+    background-color: var(--grey);
 }
 
 h1 {
-  font-size: 50px;
-  font-family: "Dancing Script", cursive;
+    font-size: 50px;
+    font-family: 'Noteworthy', cursive;
 }
 
 h2 {
-  font-size: 40px;
-  font-family: "Dancing Script", cursive;
+    font-size: 40px;
+    font-family: 'Noteworthy', cursive;
 }
 
 h3 {
-  font-size: 30px;
-  font-family: "Dancing Script", cursive;
+    font-size: 30px;
+    font-family: 'Noteworthy', cursive;
 }
 
 h4 {
-  font-size: 25px;
-  font-family: "Dancing Script", cursive;
+    font-size: 25px;
+    font-family: 'Noteworthy', cursive;
 }
 
 p,
@@ -72,335 +85,463 @@ i,
 th,
 td,
 a {
-  font-family: "Raleway", sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 header {
-  width: 100%;
-  height: 550px;
-  background-image: url("img/IMG_2433.JPG");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+    width: 100%;
+    height: 550px;
+    background-image: url('img/IMG_2433.JPG');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    transition: all 500ms;
+}
+
+header .title {
+    display: flex;
+    flex-direction: row;
+    transition: all 500ms;
+    justify-content: center;
+}
+
+header .title > img {
+    max-width: 90px;
+    margin: auto 20px;
 }
 
 header h1 {
-  font-size: 70px;
+    font-size: 70px;
+}
+
+header h3 {
+    transition: all 500ms;
 }
 
 header .overlay {
-  justify-content: space-between;
-  flex-direction: column;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 header .overlay > div {
-  margin: 40px auto 20px;
+    margin: 40px auto 20px;
+    max-width: 100%;
 }
 
 header .overlay > div > a {
-  display: inline-block;
-  position: relative;
-  font-size: 50px;
-  color: var(--white);
-  text-decoration: none;
-  animation-name: pulse;
-  animation-duration: 1000ms;
-  transform-origin: 70% 70%;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+    display: inline-block;
+    position: relative;
+    font-size: 50px;
+    color: var(--white);
+    text-decoration: none;
+    animation-name: pulse;
+    animation-duration: 1000ms;
+    transform-origin: 70% 70%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 header h1,
 header h3 {
-  color: var(--white);
-  line-height: 2;
+    color: var(--white);
+    line-height: 2;
 }
 
 #countdown .time {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin: 30px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
 }
 
 #countdown .time div {
-  width: 150px;
-  height: 150px;
-  border-radius: 150px;
-  background-color: var(--blue);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 20px;
-  color: var(--white);
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    background-color: var(--blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    color: var(--white);
+    transition: all 500ms;
 }
 
 #countdown .time div span {
-  font-size: 50px;
-  line-height: 65px;
+    font-size: 50px;
+    line-height: 65px;
+    transition: all 500ms;
 }
 
 #countdown .time div p {
-  font-family: "Dancing Script", cursive;
-  font-size: 20px;
+    font-family: 'Noteworthy', cursive;
+    font-size: 20px;
+    transition: all 500ms;
 }
 
 .section {
-  width: 90%;
-  max-width: 750px;
-  margin: auto;
+    width: 90%;
+    max-width: 750px;
+    margin: auto;
 }
 
 .section.first {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 
 .section p {
-  text-align: justify;
-  font-size: 18px;
-  line-height: 1.5;
-  margin-bottom: 20px;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
 
 #place {
-  padding: 0 0 20px 0;
+    padding: 0 0 20px 0;
 }
 
 #place h2 {
-  margin-top: 30px;
+    margin-top: 30px;
+}
+
+#place > .table {
+    width: 90%;
+    margin: auto;
+    overflow: auto;
+    overflow-x: auto;
 }
 
 .benice {
-  width: 100%;
-  height: 500px;
-  background-image: url("img/benice.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url('img/benice.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.35);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .benice .overlay h3 {
-  color: var(--white);
-  margin: 15px;
-  font-size: 40px;
+    color: var(--white);
+    margin: 15px;
+    font-size: 40px;
 }
 
 .benice .overlay a {
-  display: inline-block;
-  color: var(--white);
-  margin: 0px;
-  font-size: 18px;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
+    display: inline-block;
+    margin: 0px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid var(--white);
+    padding: 12px 15px;
+    border-radius: 5px;
+    background-color: var(--white);
+    color: var(--blue);
 }
 
 .benice .overlay a:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .payments {
-  width: 90%;
-  max-width: 750px;
-  margin: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: stretch;
+    width: 90%;
+    max-width: 750px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
 }
 
 .payments > table {
-  width: 45%;
-  height: 270px;
+    width: 45%;
+    min-width: auto;
+    max-width: 400px;
+    height: 270px;
 }
 
 .payments > table td {
-  text-align: center;
-  font-size: 18px;
-  line-height: 1.5;
-  background-color: var(--grey);
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5;
+    background-color: var(--grey);
 }
 
 td > form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 90%;
-  margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: auto;
 }
 
 td > form > textarea {
-  width: 95%;
-  height: 50px;
-  border: 1px solid grey;
-  font-size: 16px;
-  line-height: 1.5;
-  padding: 5px;
-  margin-bottom: 10px;
+    width: 95%;
+    height: 50px;
+    border: 1px solid grey;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 5px;
+    margin-bottom: 10px;
 }
 
 td > form > select {
-  width: 100%;
-  margin: 10px auto;
-  border: 1px ridge grey;
-  font-size: 16px;
-  border-radius: 0px;
-  background-color: var(--white);
+    width: 100%;
+    margin: 10px auto;
+    border: 1px ridge grey;
+    font-size: 16px;
+    border-radius: 0px;
+    background-color: var(--white);
 }
 
 td > form > textarea:focus,
 td > form > select:focus {
-  border-color: var(--blue);
+    border-color: var(--blue);
 }
 
 td > form > button {
-  width: 100%;
-  height: 45px;
-  background-color: var(--blue);
-  border: 1px solid var(--blue);
-  transition: all 0.2s ease-in-out;
-  color: var(--white);
-  margin: 10px auto;
-  font-size: 15px;
-  text-transform: uppercase;
-  cursor: pointer;
+    width: 100%;
+    height: 45px;
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    transition: all 0.2s ease-in-out;
+    color: var(--white);
+    margin: 10px auto;
+    font-size: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
 td > form > button:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 table {
-  width: 90%;
-  max-width: 750px;
-  margin: 20px auto;
-  border-collapse: collapse;
+    width: 90%;
+    min-width: 650px;
+    max-width: 750px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    overflow-x: auto;
 }
 
 table > thead {
-  background-color: var(--blue);
-  color: var(--white);
-  border-color: var(--blue);
+    background-color: var(--blue);
+    color: var(--white);
+    border-color: var(--blue);
 }
 
 table > thead th {
-  padding: 12px;
+    padding: 12px;
 }
 
 table > tbody {
-  border-bottom: 2px solid var(--blue);
+    border-bottom: 2px solid var(--blue);
 }
 
 table > tbody > tr {
-  background-color: var(--white);
+    background-color: var(--white);
 }
 
 table > tbody > tr:nth-child(2n) {
-  background-color: var(--grey);
+    background-color: var(--grey);
 }
 
 table > tbody > tr > td {
-  padding: 12px;
+    padding: 12px;
 }
 
 #contact > .center {
-  width: 90%;
-  max-width: 750px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  margin: 20px auto;
+    width: 90%;
+    max-width: 750px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px auto;
 }
 
 #contact > .center > div {
-  width: 45%;
-  height: 430px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.35);
-  margin: 20px auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+    width: 45%;
+    min-width: 320px;
+    height: 430px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.35);
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 #contact > .center > div > img {
-  width: 100%;
+    width: 100%;
 }
 
 #contact > .center > div > p {
-  font-size: 16px;
-  line-height: 1.5;
-  text-align: center;
-  padding: 10px 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    padding: 10px 20px;
 }
 
 #contact > .center > div > .middle {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 #contact > .center > div > .middle > span {
-  display: inline-block;
-  background-color: var(--blue);
-  color: var(--white);
-  padding: 3px 5px;
-  border-radius: 3px;
-  margin-left: 10px;
-  font-size: 14px;
+    display: inline-block;
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 3px 5px;
+    border-radius: 3px;
+    margin: 5px 0 0 10px;
+    font-size: 14px;
 }
 
 .contact {
-  width: 100%;
-  height: 50px;
-  background-color: var(--grey);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+    width: 100%;
+    height: 50px;
+    background-color: var(--grey);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .contact a {
-  color: darkslategray;
-  font-size: 20px;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: auto 5px;
+    color: darkslategray;
+    font-size: 15px;
+    margin: auto 0 auto 5px;
+    padding-right: 5px;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+.contact a:first-child {
+    border-right: 1px solid var(--blue);
 }
 
 footer {
-  background-color: darkslategray;
+    background-color: var(--blue);
 }
 
 footer p {
-  color: var(--white);
+    color: var(--white);
+}
+
+footer img {
+    max-width: 20px;
+    margin: 0 8px -3px 8px;
 }
 
 footer i {
-  color: crimson;
+    color: crimson;
+}
+
+@media (max-width: 600px) {
+    header {
+        height: 400px;
+    }
+
+    header .title {
+        transform: scale(0.7);
+    }
+
+    header h3 {
+        transform: scale(0.8);
+    }
+
+    #countdown .time div {
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+    }
+
+    #countdown .time div span {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    #countdown .time div p {
+        font-size: 15px;
+    }
+
+    .payments {
+        flex-direction: column;
+    }
+
+    .payments > table {
+        width: 90%;
+    }
+}
+
+@media (max-width: 400px) {
+    header {
+        height: 250px;
+    }
+
+    header .title {
+        transform: scale(0.5);
+    }
+
+    header h3 {
+        transform: scale(0.6);
+    }
+
+    header .overlay > div {
+        margin: auto 0;
+    }
+
+    #countdown .time {
+        flex-direction: column;
+        margin: 10px auto;
+    }
+
+    #countdown .time > div {
+        margin: 10px;
+    }
+
+    #contact > .center > div {
+        min-width: 280px;
+        height: 460px;
+    }
+
+    .contact {
+        height: 80px;
+        flex-direction: column;
+    }
+
+    .contact a:first-child,
+    .contact a {
+        border-right: 0;
+        margin: 3px 0;
+        padding: 0;
+    }
 }

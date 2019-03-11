@@ -1,64 +1,305 @@
-<!doctype html>
-<html class="staticrypt-html">
-<head>
-    <meta charset="utf-8">
-    <title>Háňa & Tom</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- do not cache this page -->
-    <meta http-equiv="cache-control" content="max-age=0"/>
-    <meta http-equiv="cache-control" content="no-cache"/>
-    <meta http-equiv="expires" content="0"/>
-    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/>
-    <meta http-equiv="pragma" content="no-cache"/>
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Raleway&amp;subset=latin-ext" rel="stylesheet" />
-    <link href="encrypted.css" rel="stylesheet" />
-</head>
-
-<body class="staticrypt-body">
-<div class="staticrypt-page">
-    <div class="staticrypt-form">
-        <div class="staticrypt-instructions">
-            <p class="staticrypt-title">Háňa & Tom</p>
-            <p></p>
-        </div>
-
-        <hr class="staticrypt-hr">
-
-        <form id="staticrypt-form" action="#" method="post">
-            <input id="staticrypt-password"
-                   type="password"
-                   name="password"
-                   placeholder="Heslo"
-                   autofocus/>
-
-            <input type="submit" class="staticrypt-decrypt-button" value="OTEVŘÍT"/>
-        </form>
-    </div>
-
-</div>
-
-<script src="encrypted.js"></script>
-<script>
-    document.getElementById('staticrypt-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        var passphrase = document.getElementById('staticrypt-password').value,
-            encryptedMsg = '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',
-            encryptedHMAC = encryptedMsg.substring(0, 64),
-            encryptedHTML = encryptedMsg.substring(64),
-            decryptedHMAC = CryptoJS.HmacSHA256(encryptedHTML, CryptoJS.SHA256(passphrase).toString()).toString();
-
-        if (decryptedHMAC !== encryptedHMAC) {
-            alert('Špatné heslo!');
-            return;
-        }
-
-        var plainHTML = CryptoJS.AES.decrypt(encryptedHTML, passphrase).toString(CryptoJS.enc.Utf8);
-
-        document.write(plainHTML);
-        document.close();
-    });
-</script>
-</body>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Háňa & Tom</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="default.css" rel="stylesheet" />
+        <link href="icons.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <div class="overlay">
+                    <div>
+                        <div class="title">
+                                <h1>Háňa</h1>
+                                <img src="img/heart.svg" alt="heart" />
+                                <h1>Tom</h1>
+                        </div>
+                        <h3>18. 5. 2019</h3>
+                    </div>
+                    <div>
+                        <a href="#countdown">
+                            <i class="icon-angle-down"></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <section id="countdown">
+                <h2>Náš den se blíží</h2>
+                <div class="time">
+                    <div>
+                        <span id="days"></span>
+                        <p>Dnů</p>
+                    </div>
+                    <div>
+                        <span id="hours"></span>
+                        <p>Hodin</p>
+                    </div>
+                    <div>
+                        <span id="minutes"></span>
+                        <p>Minut</p>
+                    </div>
+                </div>
+            </section>
+            <section id="text">
+                <h2>Nějaké to čtivo</h2>
+                <div class="section first">
+                    <p>Je tomu už téměř rok, co jsem Háňu požádal o ruku. Jak je už naším zvykem, nic moc dopředu jsme neplánovali (přece není kam spěchat). Mnozí z vás vědí, jakým stylem probíhají naše dovolené. Například loni, kdy jsme si plánovali poklidnou dovolenou na Moravě a v den odjezdu, kdy v ČR vůbec nebylo pěkně, jsme se rozhodli, že poletíme na Rhodos. Dost podobně vypadalo naše rozhodnutí začít plánovat svatbu. Letos v lednu jsme o tom začali více přemýšlet a říkali jsme si, že září by mohl být ten správný měsíc. Klasicky vše dopadlo úplně obráceně (jak jinak :D) a rozhodli jsme se, že svatba by mohla být už v květnu.</p>
+                    <p>Budeme moc rádi, pokud si uděláte čas a tento pro nás důležitý den prožijete s námi. Není třeba se nějak dlouhodobě připravovat, šílet nebo absolvovat dlouhé soustředění. Prostě a jednoduše dorazte s dobrou náladou, hromádkou štěstí a kopcem dobrého počasí. Často se svatebčané stresují i s tím, co mají novomanželům darovat. Toho jsme se vás snažili ušetřit, a tak níže na této stránce můžete najít, co nás opravdu potěší.</p>
+                    <p>Celá svatba bude probíhat na jednom místě, a tak není třeba řešit, kdo bude či nebude pít, neboť všichni se můžou ubytovat v penzionu přímo v místě konání. Zde je také možné doladit vaše outfity těsně před obřadem nebo složit hlavu až vám bude příliš těžká ze všech nově nabytých zážitků. Jak si již brzy přečetete v naší oficiální pozvánce, svatba se bude konat 18. 5. 2019 na Barokním statku v Benicích a příjezd všech povozů a dovozů je naplánován mezi 10:00 - 10:30. Obřad pak dle programu začíná v 11:30.</p>
+                    <p>Ten, kdo nás dobře zná, ví, že si nepotrpíme na klasiku, tradice nebo pověry. Tímto jsme se řídili i při plánování celého svatebního dne. Program jsme skládali tak, aby co nejvíce ladil s tím, jací jsme a co nás baví. Pokud nám to počasí dovolí, tak se můžete těšit na klání hned v několika netradičních sportovních disciplínách. Sportovní oblečení nebude třeba, vše zvládnete v šatech, podpatcích, košilích i se zapnutým páskem u kalhot.</p>
+                    <p>Můžete se těšit i na hromady fotek (teda snad :D). Plánujeme pár fotek z dětství, u kterých se zasmějete, ale i nějaké společné, které vás vlastně asi taky dost pobaví. Navíc budou v den svatby rozmístěné jednorázové fotoaparáty a budeme moc rádi, když nám pomůžete náhodně zdokumentovat celý svatební den.</p>
+                    <p>Když už jsme u těch tradic, další samostatnou kategorií jsou aktivity, které si nepřejí sami budoucí manželé a rádi by vás tímto poprosili, zda byste je v náš svatební den mohli vynechat. Na pořadu dne nejsou žádná velká překvapení a únos nevěsty je jen na vlastní nebezpečí. Ženich předem říká, že nikoho hledat ani vykupovat nebude a pokud bude nevěsta unesena, nechť si únosce připraví plnou nádrž (široko daleko nic není) a plnou peněženku (budou tam sedět hodně dlouho). Myslíme si, že jsme připravili spoustu zábavy s velmi pestrým programem, a tak věříme, že naše pravidla a přání budete respektovat.</p>
+                    <p>Takto na poslední chvíli neměli Chinaski, Karel Gott ani Tomáš Klus čas, a tak jsme našli super DJe, který se bude celé odpoledne a večer starat o hudební produkci. Máme tu i speciální možnost nechat si zahrát písničku na přání. Pokud byste tedy během dne či večera rádi slyšeli váš oblíbený song, stačí napsat na email@email.cz a my se společně s Djem vynasnažíme, aby vaše píseň zazněla.</p>
+                    <p>Na závěr jedna velká <b>PROSBA</b>. Máme tu i některé věci, které se nesmí, a to pod opravdu velkou pokutou (v řádu desítek tisíc!). Jedná se o jakýkoliv otevřený oheň donesený vámi hosty. Jelikož se v areálu nacházejí zvířata, a navíc je statek kulturní památkou, je přísně zakázáno používat ohňostroje a jiný otevřený oheň. Kuřáci se nemusí bát, kouření povoleno bude.</p>
+                    <p>Co dodat abychom neskončili těmi zákazy a příkazy. Pojďme si to společně prožít a užít. A proto si Vás všechny dovolujeme pozvat na nezapomenutelný den, kdy si řekneme své ANO.</p>
+                    <p>S láskou, Háňa & Tom</p>
+                </div>
+            </section>
+            <section id="program">
+                <h2>Program</h2>
+                <div class="section first">
+                    <p>Usilovně na něm pracujeme dnem i nocí. Nezůstane stát kámen na kameni! Snažíme se abychom dali košem tradicím a zažitým pořádkům a přesto jsme se všichni dobře bavili.</p>
+                </div>
+            </section>
+            <section id="place">
+                <div class="benice">
+                    <div class="overlay">
+                        <div class="address">
+                            <h3>Barokní statek Benice</h3>
+                            <a href="https://goo.gl/maps/oQJBsU61ua32" target="_blank" title="Barokní statek Benice - mapa">Benice 1, Chrášťany<br />257 44 </a>
+                        </div>
+                    </div>
+                </div>
+                <h2>Ubytování</h2>
+                <div class="section first">
+                    <p>Vzhledem k tomu, že celá svatba je koncipována jako víkendová akce, je samozřejmostí i ubytování vás svatebčanů. Možností a kombinací je tu hned několik. Je možné se pouze ubytovat, kdy budeme vybírat 600 Kč na osobu, nebo rozšířená verze i s nedělní snídaní, která vás vyjde na pouho pouhých 750 Kč na osobu.</p>
+                    <p>Pokoje a jejich obsazenost je možné vidět v následující tabulce. Pokud už jste řešili ubytování s ženichem a nejste v tabulce níže, je někde chyba a je dobré se zavčasu ozvat.</p>
+                    <p>Zároveň prosím, aby jste si své pokoje rezervovali včas, jelikož s blížící se svatbou hrozí, že na vás ženich nebude mít čas a vy budete muset spát venku :D</p>
+                </div>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>č. pokoje</th>
+                                <th>typ pokoje</th>
+                                <th>Jména</th>
+                                <th>Placeno</th>
+                                <th>Poznámka</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1.</td>
+                                <td>dvoulůžkový</td>
+                                <td>Háňa a Tom</td>
+                                <td>ANO</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>2.</td>
+                                <td>čtyřlůžkový</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>3.</td>
+                                <td>třílůžkový</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>4.</td>
+                                <td>dvoulůžkový</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>5.</td>
+                                <td>třílůžkový</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>6.</td>
+                                <td>třílůžkový</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>7.</td>
+                                <td>třílůžkový</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>8.</td>
+                                <td>čtyřlůžkový</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>9. - pokoj 1</td>
+                                <td>dvoulůžkový</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>9. - pokoj 2</td>
+                                <td>čtyřlůžkový</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>10. - pokoj 1</td>
+                                <td>dvoulůžkový</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>10. - pokoj 2</td>
+                                <td>dvoulůžkový</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>11. - pokoj 2</td>
+                                <td>sedmilůžkový</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section id="payment">
+                <h2>Možnosti platby</h2>
+                <div class="payments">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>QR platba</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <form onsubmit="event.preventDefault(); handleQR();" id="form">
+                                        <select name="price" id="price">
+                                                <option>Počet osob</option>
+                                                <optgroup label="bez snídaně">
+                                                    <option value="600">1 osoba</option>
+                                                    <option value="1200">2 osoby</option>
+                                                    <option value="1800">3 osoby</option>
+                                                    <option value="2400">4 osoby</option>
+                                                </optgroup>
+                                                <optgroup label="se snídaní">
+                                                    <option value="750">1 osoba</option>
+                                                    <option value="1500">2 osoby</option>
+                                                    <option value="2250">3 osoby</option>
+                                                    <option value="3000">4 osoby</option>
+                                                </optgroup>
+                                            </select>
+                                        <textarea name="note" placeholder="Jména osob za které platíte" id="note"></textarea>
+                                        <button type="submit">Generovat QR kód</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Převod</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Jednodušete pošlete za každou osobu, za kterou platíte <b>600 Kč</b> (bez snídaně) nebo <b>750 Kč</b> (se snídaní) na účet <b>1025000263/6100</b> a do poznámky uveďte <b>jména za koho platíte.</b>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section id="presents">
+                <h2>Dary</h2>
+                <div class="section first">
+                    <p>Komenský, Němcová, Palacký, Destinová nebo dokonce Masaryk. Ti všichni vám rádi pomohou se svatebním darem. Fantazii pro balení či předání se meze nekladou, ale jednoduchému obálkovému systému se určitě nebráníme. Prostě a jednoduše si s tím nedělejte těžkou hlavu a pojďte si to s námi hlavně užít.</p>
+                </div>
+            </section>
+            <section id="contact">
+                <h2>Kontakty</h2>
+                <div class="center">
+                    <div>
+                        <img src="img/DSC_0174.JPG" />
+                        <div class="middle">
+                            <h3>Háňa</h3>
+                            <span>nevěsta</span>
+                        </div>
+                        <p>Nejvyšší rozhodovací práva. Pokud nevěsta něco řekne je to vpodstatě zákon a není dobré se s ní dohadovat.<br /><b>Komunikuje do 14 dnů před svatbou.</b></p>
+                        <div class="contact">
+                            <a href="tel:739163208" title="telefon / nevěsta">739 163 208</a>
+                            <a href="mailto:culikova.hanka@gmail.com" title="email / nevěsta">culikova.hanka@gmail.com</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="img/DSC_0627.JPG" />
+                        <div class="middle">
+                            <h3>Tom</h3>
+                            <span>ženich</span>
+                        </div>
+                        <p>Druhá nejvyšší rozhodovací práva. Pokud neřekne nevěsta jinak, můžete slovo ženicha brát jako hotovou věc. <br /><b>Komunikuje do 7 dnů před svatbou.</b></p>
+                        <div class="contact">
+                            <a href="tel:777659939" title="telefon / ženich">777 659 939</a>
+                            <a href="mailto:tomas.kazatel@gmail.com" title="email / ženich">tomas.kazatel@gmail.com</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="img/dada.jpg" />
+                        <div class="middle">
+                            <h3>Dáda</h3>
+                            <span>svědkyně</span>
+                        </div>
+                        <p>Nevěsta neodpovídá?<br />Už je těsně před svatbou?<br /> Svědkyně s vámi domluví a zařídí vše! Její slovo je jako slovo snoubenců.</p>
+                        <div class="contact">
+                            <a href="tel:736662638" title="telefon / svědkyně">736 662 638</i></a>
+                            <a href="mailto:daddula@seznam.cz" title="email / svědkyně">daddula@seznam.cz</i></a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="img/tip.jpg" />
+                        <div class="middle">
+                            <h3>Tom</h3>
+                            <span>svědek</span>
+                        </div>
+                        <p>Ženich neodpovídá?<br />Už je těsně před svatbou?<br /> Svědek s vámi domluví a zařídí vše! Jeho slovo je jako slovo snoubenců.</p>
+                        <div class="contact">
+                            <a href="tel:737417641" title="telefon / svědek">737 417 641</i></a>
+                            <a href="mailto:tomas.marvan@gmail.com" title="email / svědek">tomas.marvan@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <p>Vyrobeno s <img src="img/heart.svg" alt="heart" /> v Praze leta Páně 2019.</p>
+            </footer>
+        </main>
+        <script src="default.js"></script>
+    </body>
 </html>
