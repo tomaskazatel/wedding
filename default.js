@@ -35,18 +35,13 @@ function countdown() {
 function handleQR() {
     var price = document.getElementById('price').value;
     var message = document.getElementById('note').value;
-    var date = new Date();
-    var formatDate = date.getFullYear() + date.getMonth() + date.getDate();
-
-    var hash =
-        'SPD*1.0*ACC:CZ0961000000001025000263*AM:' +
+    var url = 
+        'http://api.paylibo.com/paylibo/generator/czech/image?accountNumber=1025000263&bankCode=6100&amount=' +
         price +
-        '*CC:CZK*DT:' +
-        formatDate +
-        '*MSG:' +
-        message;
-
-    var url = 'https://chart.googleapis.com/chart?cht=qr&chs=180x180&chl=' + hash;
+        '&currency=CZK&message=' +
+        message +
+        '&size=180&branding=false&compress=false';
+    
     var image = document.createElement('img');
     image.src = url;
     image.alt = 'qr code';
