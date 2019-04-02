@@ -54,7 +54,8 @@ footer {
 header,
 #text,
 #place,
-#presents {
+#presents,
+#faq {
     background-color: var(--grey);
 }
 
@@ -496,6 +497,11 @@ footer i {
     .payments > table {
         width: 90%;
     }
+}
+
+#faq > div.section p {
+    text-align: center;
+    margin-top: 10px;
 }
 
 @media (max-width: 400px) {
