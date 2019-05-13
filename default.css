@@ -499,6 +499,16 @@ footer i {
     }
 }
 
+#program > div > table {
+    max-width: 400px;
+    min-width: auto;
+    border-top: 2px solid var(--blue);
+    width: 90%;
+    margin: auto;
+    overflow: auto;
+    overflow-x: auto;
+}
+
 #faq > div.section p {
     text-align: center;
     margin-top: 10px;
